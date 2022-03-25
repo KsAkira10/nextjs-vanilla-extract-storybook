@@ -4,6 +4,13 @@ const {
 const withVanillaExtract = createVanillaExtractPlugin();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {reactStrictMode: true,};
+const nextConfig = {
+  trailingSlash: true,
+  reactStrictMode: true,
+  images: {
+    loader: 'akamai',
+    path: '/',
+  },
+};
 
 module.exports = withVanillaExtract(nextConfig);
