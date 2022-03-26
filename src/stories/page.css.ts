@@ -1,4 +1,4 @@
-import { globalStyle, style } from "@vanilla-extract/css";
+import { globalStyle, style } from '@vanilla-extract/css';
 
 globalStyle('section', {
   fontFamily: "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
@@ -73,4 +73,3 @@ globalStyle(`section ${tipWrapper} svg`, {
 globalStyle(`section ${tipWrapper} svg path`, {
   fill: '#1ea7fd',
 });
-

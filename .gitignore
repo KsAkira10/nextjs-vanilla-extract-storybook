@@ -40,3 +40,6 @@ yarn-error.log*
 
 # tsconfig
 *.tsbuildinfo
+
+# jest
+__tests__/__snapshots__/

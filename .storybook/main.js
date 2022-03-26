@@ -2,17 +2,11 @@ const { VanillaExtractPlugin } = require('@vanilla-extract/webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  stories: [
-    "../src/**/*.stories.@(js|jsx|ts|tsx)"
-  ],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions"
-  ],
-  framework: "@storybook/react",
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-interactions'],
+  framework: '@storybook/react',
   core: {
-    builder: "webpack5",
+    builder: 'webpack5',
   },
   webpackFinal(baseConfig, options) {
     const { module = {}, plugins = {} } = baseConfig;
@@ -22,11 +16,7 @@ module.exports = {
 
     return {
       ...baseConfig,
-      plugins: [
-        ...plugins,
-        new VanillaExtractPlugin(),
-        new MiniCssExtractPlugin(),
-      ],
+      plugins: [...plugins, new VanillaExtractPlugin(), new MiniCssExtractPlugin()],
       module: {
         ...module,
         rules: [
@@ -47,4 +37,4 @@ module.exports = {
       },
     };
   },
-}
+};
