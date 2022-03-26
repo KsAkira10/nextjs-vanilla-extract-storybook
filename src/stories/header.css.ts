@@ -1,4 +1,4 @@
-import { globalStyle, style } from "@vanilla-extract/css";
+import { globalStyle, style } from '@vanilla-extract/css';
 
 export const wrapper = style({
   fontFamily: "'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
@@ -21,15 +21,14 @@ globalStyle('h1', {
   margin: '6px 0 6px 10px',
   display: 'inline-block',
   verticalAlign: 'top',
-}); 
+});
 
 globalStyle('button + button', {
   marginLeft: '10px',
 });
 
-
 export const welcome = style({
   color: '#333',
   fontSize: '14px',
   marginRight: '10px',
-}) 
+});

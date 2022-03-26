@@ -1,4 +1,4 @@
-import { globalStyle, style } from "@vanilla-extract/css";
+import { globalStyle, style } from '@vanilla-extract/css';
 
 export const container = style({
   padding: '0 2rem',
@@ -31,23 +31,23 @@ globalStyle(`${footer} a`, {
 });
 
 const titlePseudoClass = {
-  textDecoration: 'underline'
-}
+  textDecoration: 'underline',
+};
 
 export const title = style({
   margin: 0,
   lineHeight: 1.15,
   fontSize: '4rem',
   textAlign: 'center',
-  ':hover': titlePseudoClass, 
-  ':focus': titlePseudoClass, 
+  ':hover': titlePseudoClass,
+  ':focus': titlePseudoClass,
   ':active': titlePseudoClass,
 });
 
 globalStyle(`${title} a`, {
   color: '#0070f3',
   textDecoration: 'none',
-})
+});
 
 export const description = style({
   margin: '4rem 0',
@@ -61,7 +61,8 @@ export const code = style({
   borderRadius: '5px',
   padding: '0.75rem',
   fontSize: '1.1rem',
-  fontFamily: 'Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace',
+  fontFamily:
+    'Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace',
 });
 
 export const grid = style({
@@ -74,14 +75,14 @@ export const grid = style({
     'screen and (max-width: 600px)': {
       width: '100%',
       flexDirection: 'column',
-    }
-  }
+    },
+  },
 });
 
 const cardPseudoClass = {
   color: '#0070f3',
   borderColor: '#0070f3',
-}
+};
 
 export const card = style({
   margin: '1rem',
@@ -94,7 +95,7 @@ export const card = style({
   transition: 'color 0.15s ease, border-color 0.15s ease',
   maxWidth: '300px',
   ':hover': cardPseudoClass,
-  ':focus': cardPseudoClass, 
+  ':focus': cardPseudoClass,
   ':active': cardPseudoClass,
 });
 
@@ -102,7 +103,6 @@ globalStyle(`${card} h2`, {
   margin: '0 0 1rem 0',
   fontSize: '1.5rem',
 });
-
 
 globalStyle(`${card} p`, {
   margin: 0,

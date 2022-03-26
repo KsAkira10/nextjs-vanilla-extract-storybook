@@ -39,7 +39,33 @@ yarn-error.log*
 /storybook-static/
 
 # tsconfig
+tsconfig.json
 *.tsbuildinfo
 
 # next
 next.config.js
+
+# vscode
+.vscode
+
+# storybook
+.storybook
+
+# prettier
+.prettierrc
+
+# eslint
+.eslintrc.json
+lint-staged.config.js
+
+# pnpm
+pnpm-lock.yaml
+
+# docs
+README.md
+package.json
+
+# jest
+jest.setup.js
+jest.config.js
+__tests__/__snapshots__

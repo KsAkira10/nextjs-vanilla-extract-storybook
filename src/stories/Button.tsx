@@ -24,21 +24,10 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
-  variant = 'primary',
-  size = 'medium',
-  label,
-  ...props
-}: ButtonProps) => {
+export const Button = ({ variant = 'primary', size = 'medium', label, ...props }: ButtonProps) => {
   return (
-    <button
-      type="button"
-      className={clsx(variants[variant], sizes[size])}
-      {...props}
-    >
+    <button type="button" className={clsx(variants[variant], sizes[size])} {...props}>
       {label}
     </button>
   );
 };
-
-
