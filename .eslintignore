@@ -40,3 +40,6 @@ yarn-error.log*
 
 # tsconfig
 *.tsbuildinfo
+
+# next
+next.config.js
