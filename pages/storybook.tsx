@@ -1,4 +1,4 @@
-import { Page } from '../src/Page'
+import { Page } from '~@stories';
 
 export default function Storybook() {
     return (<Page />)
