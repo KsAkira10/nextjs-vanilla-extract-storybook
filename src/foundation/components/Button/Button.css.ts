@@ -1,4 +1,4 @@
-import { style } from '@vanilla-extract/css';
+import { style, styleVariants } from '@vanilla-extract/css';
 
 import { defaultVars } from '../../theme/vars.css';
 
@@ -24,4 +24,13 @@ export const root = style({
   ':focus': {
     boxShadow: '0 1px 0 rgba(0,0,0,0.5), 0 -1px 0 rgba(0,0,0,0.2)',
   },
+});
+
+export const variant = styleVariants({
+  primary: [
+    root,
+    {
+      backgroundColor: defaultVars.color.primary,
+    },
+  ],
 });

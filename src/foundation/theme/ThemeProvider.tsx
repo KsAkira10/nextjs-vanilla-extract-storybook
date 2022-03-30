@@ -11,14 +11,14 @@ export interface ThemeProviderProps {
   themeClass: ThemeContextValue['themeClass'];
 }
 
-export function ThemeProvider(props: ThemeProviderProps) {
+export function ThemeProvider({ children, themeClass }: ThemeProviderProps) {
   const value = React.useMemo(() => {
     return {
-      themeClass: props.themeClass,
+      themeClass: themeClass,
     };
-  }, [props.themeClass]);
+  }, [themeClass]);
 
-  return <ThemeContext.Provider value={value}>{props.children}</ThemeContext.Provider>;
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 
 export const useTheme = () => {

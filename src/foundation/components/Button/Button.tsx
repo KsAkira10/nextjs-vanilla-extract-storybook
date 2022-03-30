@@ -8,7 +8,9 @@ import { ButtonBase, ButtonBaseProps } from '../ButtonBase';
 
 import * as styles from './Button.css';
 
-interface Props {}
+interface Props {
+  variant?: keyof typeof styles.variant;
+}
 
 type PolymorphicButton = Polymorphic.ForwardRefComponent<
   Polymorphic.IntrinsicElement<typeof ButtonBase>,
@@ -18,7 +20,7 @@ type PolymorphicButton = Polymorphic.ForwardRefComponent<
 export type ButtonProps = Polymorphic.OwnProps<PolymorphicButton>;
 
 export const Button = React.forwardRef((props, ref) => {
-  const { className, ...restProps } = props;
+  const { className, variant = 'primary', ...restProps } = props;
 
-  return <ButtonBase ref={ref} className={clsx(styles.root, className)} {...restProps} />;
+  return <ButtonBase ref={ref} className={clsx(styles.root, styles.variant[variant], className)} {...restProps} />;
 }) as PolymorphicButton;
